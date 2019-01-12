@@ -1,0 +1,21 @@
+/**
+  This file controls how the images are displayed on the page.
+  In general we force max-width of 100% on all image elements, as well as center alignment. 
+*/
+
+// make images responsive
+img{
+  @include mobile{
+    max-width: 100%;
+  }
+}
+
+.webiny-cms-element-image{
+  img{
+    max-width: 100%;
+  }
+
+  @include mobile{
+    text-align: center !important;
+  }
+}

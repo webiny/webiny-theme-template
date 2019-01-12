@@ -1,0 +1,64 @@
+/**
+  The layout which you create via the page builder consists of blocks, rows and columns.
+  This file controls how they are rendered on the page, and ensures all elements are mobile responsive.
+  In general we don't recommend making any changes where unless you test them thoroughly on many different page designs.
+*/
+
+// controls the container element around the "block" component.
+.webiny-cms-layout-block-container{
+  @include mobile{
+    background-size: cover !important;
+  }
+}
+
+// block component
+.webiny-cms-layout-block{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-self: flex-start;
+
+  // blocks can have fixed width defined via the CMS, this ensures that the fixed width doesn't break the responsive design
+  @include mobile{
+    width: 100% !important;
+  }
+}
+
+// row component
+.webiny-cms-layout-row{
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  @include desktop-and-tablet{
+    flex-direction: row;
+  }
+
+  // rows can have fixed width defined via the CMS, this ensures that the fixed width doesn't break the responsive design
+  @include mobile{
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 auto !important;
+  }
+}
+
+// column component
+.webiny-cms-layout-column{
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  position: relative;
+  flex: auto 0;
+  flex-direction: column;
+
+  @include mobile{
+    width: auto !important;
+  }
+
+  @include desktop-and-tablet{
+    text-align: left;
+    width: auto;
+  }
+}

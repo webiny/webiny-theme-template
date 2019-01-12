@@ -1,0 +1,10 @@
+{
+  "name": "demo-theme",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-hamburger-menu": "^1.1.1"
+  }
+}
